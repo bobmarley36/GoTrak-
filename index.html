@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoTrak - Package Tracking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📦 GoTrak</h1>
+    <p>Enter your tracking number and select a carrier to see your package status.</p>
+
+    <form id="trackingForm">
+      <input type="text" id="trackingNumber" placeholder="e.g. 1Z999AA10123456784" required />
+      <br />
+      <select id="carrier" required>
+        <option value="">Select Carrier</option>
+        <option value="ups">UPS</option>
+        <option value="usps">USPS</option>
+        <option value="fedex">FedEx</option>
+      </select>
+      <br />
+      <button type="submit">Track</button>
+    </form>
+
+    <div id="result" class="hidden">
+      <h2>Status</h2>
+      <div id="statusOutput">Loading...</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
